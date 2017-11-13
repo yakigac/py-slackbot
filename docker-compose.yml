@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pybot:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    volumes:
+      - .:/myapp
+    environment:
+      SLACK_API_TOKEN: ${SLACK_API_TOKEN}
